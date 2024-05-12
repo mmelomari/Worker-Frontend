@@ -1,6 +1,6 @@
 Projeto CRUD de Gerenciamento de Funcionários
 #
-Este é um projeto que visa criar um sistema de gerenciamento de funcionários, utilizando as operações básicas do CRUD (Create, Read, Update e Delete). O CRUD é uma abreviação que representa as principais operações de um sistema de banco de dados.
+Este é um projeto que visa criar um sistema de gerenciamento de funcionários, utilizando as operações básicas do CRUD (Create, Read, Update e Delete).
 #
 Funcionalidades:
 Cadastro de novos funcionários;
