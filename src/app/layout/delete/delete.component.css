@@ -1,0 +1,33 @@
+.confirm-dialog {
+  width: 500px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 3rem;
+  margin-top: 0;
+}
+
+.confirm {
+  text-align: center;
+}
+
+.font {
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  white-space: nowrap;
+  text-align: center;
+}
+
+mat-dialog-actions {
+  align-items: center;
+}
+
+.mat-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

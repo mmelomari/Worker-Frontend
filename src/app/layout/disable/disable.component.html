@@ -1,0 +1,65 @@
+<mat-card>
+    <div>
+        <h1>Informações</h1>
+    </div>
+
+    <div *ngIf="worker">
+        <form>
+            <div class="input">
+                <mat-form-field>
+                    <mat-label>Nome:</mat-label>
+                    <input matInput type="text" value="{{ worker.name }}" disabled>
+                </mat-form-field>
+            </div>
+
+            <div class="input">
+                <mat-form-field>
+                    <mat-label>Sobrenome:</mat-label>
+                    <input matInput type="text" value="{{ worker.lastName }}" disabled>
+                </mat-form-field>
+            </div>
+
+            <div class="input">
+                <mat-form-field>
+                    <mat-label>Departamento:</mat-label>
+                    <input matInput type="text" value="{{ worker.department }}" disabled>
+                </mat-form-field>
+            </div>
+
+            <div class="input">
+                <mat-form-field>
+                    <mat-label>Cargo:</mat-label>
+                    <input matInput type="text" value="{{ worker.office }}" disabled>
+                </mat-form-field>
+            </div>
+
+            <div class="input">
+                <mat-form-field>
+                    <mat-label>Situação:</mat-label>
+                    <input matInput type="text" value="{{ worker.activity == true ? 'Ativo' : 'Inativo'}}" disabled>
+                </mat-form-field>
+            </div>
+
+            <div class="input">
+                <mat-form-field>
+                    <mat-label>Data de criação:</mat-label>
+                    <input matInput type="text" value="{{ worker.creationDate }}" disabled>
+                </mat-form-field>
+            </div>
+
+            <div class="input">
+                <mat-form-field>
+                    <mat-label>Data de Alteração:</mat-label>
+                    <input matInput type="text" value="{{ worker.changeDate }}" disabled>
+                </mat-form-field>
+            </div>
+
+            <div class="btn">
+                <button (click)="inactivateWorker()" mat-raised-button color="warn">Inativar Usuário</button>
+                <button routerLink='' mat-raised-button>Voltar</button>
+            </div>
+
+        </form>
+    </div>
+
+</mat-card>

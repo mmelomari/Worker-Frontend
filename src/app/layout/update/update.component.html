@@ -1,0 +1,8 @@
+<div *ngIf="worker">
+    <app-tools 
+        [action]="action" 
+        [title]="title"
+        [workerData]="worker"
+        (onSubmit)="updateWorker($event)"
+        ></app-tools>
+</div>

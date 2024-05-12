@@ -1,0 +1,85 @@
+<mat-card>
+
+  <p class="card-title">Registro dos funcionários da empresa</p>
+
+  <div class="fixed-width-card">
+    <div class="card overflow-auto -mt-16">
+
+      <div class="search-container">
+        <div class="input search">
+          <mat-form-field>
+            <mat-label>Buscar Funcionário:</mat-label>
+            <input [formControl]="searchCtrl" matInput type="text" placeholder="Digite o nome do Funcionário"
+              (input)="search($event)">
+          </mat-form-field>
+        </div>
+
+        <button mat-fab color="primary" routerLink="/create" matTooltip="Cadastrar Funcionário">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <div class="mat-elevation-z8">
+
+      <table mat-table [dataSource]="workers">
+        <ng-container matColumnDef="Situation">
+          <th mat-header-cell *matHeaderCellDef>Situação</th>
+          <td mat-cell *matCellDef="let worker">
+
+            <div *ngIf="worker.activity == true; else disable">
+              🟢
+            </div>
+
+            <ng-template #disable>
+              🔴
+            </ng-template>
+
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Name">
+          <th mat-header-cell *matHeaderCellDef>Nome</th>
+          <td mat-cell *matCellDef="let worker"> {{worker.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="LastName">
+          <th mat-header-cell *matHeaderCellDef>Sobrenome</th>
+          <td mat-cell *matCellDef="let worker"> {{worker.lastName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Department">
+          <th mat-header-cell *matHeaderCellDef>Departamento</th>
+          <td mat-cell *matCellDef="let worker"> {{worker.department}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Office">
+          <th mat-header-cell *matHeaderCellDef>Cargo</th>
+          <td mat-cell *matCellDef="let worker"> {{worker.office}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Actions">
+          <th mat-header-cell *matHeaderCellDef>Ações</th>
+          <td mat-cell *matCellDef="let worker">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button class="action" mat-menu-item routerLink="update/{{worker.id}}">Editar 🖊️</button>
+              <button class="action" mat-menu-item routerLink="disable/{{worker.id}}">Inativar 🔴</button>
+              <button class="action" mat-menu-item (click)="openDialog(worker.id)">Excluir ❌</button>
+            </mat-menu>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+        <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+      </table>
+
+      <mat-paginator lang="pt-br" [length]="workersGeneral.length" [pageSizeOptions]="pageSizeOptions"
+        showFirstLastButtons aria-label="Select page of periodic elements" (page)="onPageChange($event)">
+      </mat-paginator>
+    </div>
+  </div>
+
+</mat-card>

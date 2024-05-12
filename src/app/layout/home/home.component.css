@@ -1,0 +1,36 @@
+.fixed-width-card {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+mat-form-field {
+    width: 145%;
+}
+
+.card-title {
+    font-size: 3.3rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}

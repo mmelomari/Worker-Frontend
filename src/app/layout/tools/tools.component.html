@@ -1,0 +1,58 @@
+<mat-card>
+
+    <h1>{{ title }} </h1>
+
+    <form [formGroup]="workerForm" (ngSubmit)="submit()" #formDit="ngForm">
+        <input type="hidden" formControlName="id">
+
+        <div>
+            <mat-form-field class="input">
+                <mat-label>Nome:</mat-label>
+                <input matInput type="text" formControlName="name" placeholder="Insira o Nome!" required>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field class="input">
+                <mat-label>Sobrenome:</mat-label>
+                <input matInput type="text" formControlName="lastName" placeholder="Insira o Sobrenome!" required>
+            </mat-form-field>
+        </div>
+
+        <div class="input">
+            <mat-form-field>
+                <mat-label>Departamento:</mat-label>
+                <mat-select id="department" formControlName="department" required>
+                    <mat-option value="Tecnologia">Tecnologia</mat-option>
+                    <mat-option value="Suporte">Suporte</mat-option>
+                    <mat-option value="Marketing">Marketing</mat-option>
+                    <mat-option value="Jornalismo">Jornalismo</mat-option>
+                    <mat-option value="Almoxarifado">Almoxarifado</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="input">
+            <mat-form-field>
+                <mat-label>Cargo:</mat-label>
+                <mat-select id="office" formControlName="office" required>
+                    <mat-option value="Diretor">Diretor</mat-option>
+                    <mat-option value="Pleno">Pleno</mat-option>
+                    <mat-option value="Sênior">Sênior</mat-option>
+                    <mat-option value="Junior">Junior</mat-option>
+                    <mat-option value="Gerente">Gerente</mat-option>
+                    <mat-option value="Encarregado">Encarregado</mat-option>
+                    <mat-option value="Técnico">Técnico</mat-option>
+                    <mat-option value="Vendedor">Vendedor</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="btn">
+            <button type="submit" mat-raised-button color="primary" 
+                [disabled]="!workerForm.valid">{{ action }}</button>
+            <button mat-raised-button routerLink="">Voltar</button>
+        </div>
+    </form>
+
+</mat-card>
