@@ -18,6 +18,6 @@ O principal objetivo deste projeto foi focar na lógica do sistema, priorizando 
 #
 Este projeto está em constante evolução. No futuro, pretendo implementar novas funcionalidades para tornar a aplicação ainda mais completa e útil. Estou aberto a sugestões e desafios, sempre buscando aprimorar minhas habilidades como desenvolvedor.
 #
-Confira o vídeo demonstrativo do projeto em ação aqui:
+Confira o vídeo demonstrativo do projeto em ação aqui: 
 
-O código fonte da API desse projeto está disponível aqui: . Sinta-se à vontade para explorar e contribuir com novas ideias!
+O código fonte da API desse projeto está disponível aqui: https://github.com/mmelomari/Worker-API. Sinta-se à vontade para explorar e contribuir com novas ideias!
