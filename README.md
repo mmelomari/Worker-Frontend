@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Workerfront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
@@ -29,3 +30,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # Worker-Frontend
 >>>>>>> 30f2b1e72b326871da3a257c70afb6568e187033
+=======
+
+>>>>>>> 9e9775001cd0fbe3fc3b592ff0d43b2d8873b3f0
